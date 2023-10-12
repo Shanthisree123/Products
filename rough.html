@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,51 +16,56 @@
             flex-direction: row;
             align-items: center;
         }
+
         .product-image {
             width: 200px;
             height: 300px;
             margin-right: 80px;
         }
+
         /* Add more styling as needed */
         .list-layout .product-card {
             flex-direction: column;
         }
+
         /* Highlight searched text */
         .highlight {
-            background-color: rgb(225, 225, 95);
+            background-color: rgb(48, 130, 192);
         }
-        a{
+
+        a {
             text-decoration: none;
             font-size: 25px;
             color: black;
         }
-        #search{
+
+        #search {
             font-size: 25px;
- 
+
         }
-        
     </style>
 </head>
+
 <body>
     <center>
         <h1>Product List</h1>
-    <!-- Search bar -->
-    <input type="text" id="search" placeholder="Search...">
-    
-    <!-- Layout switch buttons -->
-    <br>
-    <br>
-    <div>
-        <button id="grid-layout-button" ><a href="grid.html">Grid</a></button>
-        <button id="list-layout-button"><a href="index.html">List</a></button>
-    </div>
-   
-    <div id="product-container" class="grid-layout">
-         </div>
-</center>
+        <!-- Search bar -->
+        <input type="text" id="search" placeholder="Search...">
+
+        <!-- Layout switch buttons -->
+        <br>
+        <br>
+        <div>
+            <button id="grid-layout-button"><a href="grid.html">Grid</a></button>
+            <button id="list-layout-button"><a href="index.html">List</a></button>
+        </div>
+
+        <div id="product-container" class="grid-layout">
+        </div>
+    </center>
 
     <script>
-       
+
         const products = [
             {
                 id: 1,
@@ -69,7 +75,7 @@
                 color: 'BLUE',
                 variants: ['S', 'M', 'L'],
             },
-            
+
             {
                 id: 2,
                 title: 'UM TRAINING',
@@ -111,10 +117,10 @@
                 color: 'ORANGE',
                 variants: ['XS', 'M', 'XL'],
             },
-            
+
         ];
 
-  
+
         let currentLayout = 'grid-layout';
 
         function createProductCard(product) {
@@ -131,7 +137,7 @@
             `;
             return card;
         }
-        
+
         function renderProducts(layout) {
             const container = document.getElementById('product-container');
             container.innerHTML = '';
@@ -149,7 +155,7 @@
             const cards = document.querySelectorAll('.product-card');
             cards.forEach(card => {
                 const title = card.querySelector('h2').textContent.toLowerCase();
-                
+
                 if (title.includes(searchTerm)) {
                     card.classList.add('highlight');
                 } else {
@@ -171,4 +177,5 @@
         renderProducts(currentLayout);
     </script>
 </body>
+
 </html>
