@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="script.js">
+    <style>
+        /* styles.css */
+        .product-card {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            width: 300px;
+            text-align: center;
+        }
+
+        /* Badge styling */
+        .badge {
+            background-color: #63a6e0;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            width: 100px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            width: 300px;
+            text-align: center;
+        }
+        #search-input {
+    width: 30%;
+    padding: 13px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.hlo{
+        border:1px solid #0b0b0b;
+
+    }
+    a{
+        text-decoration: none;
+    }
+
+        /* Additional styles for grid view can be added here */
+    </style>
+
+<body>
+    <center>
+        <h1>Product List</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Type something to search products...">
+            <button style="font-size: 25px;">Search</button>
+        </div><br>
+        <div class="layout-switch">
+            <button id="grid-layout-button"><a href="grid.html" style="font-size: 20px; color: #0b0b0b;">Grid</a></button>
+            <button id="list-layout-button"><a href="index.html" style="font-size: 20px; color: #0b0b0b;">List</a></button>
+        </div>
+        <br>
+
+        <div class="product-container" id="product-container">
+            <!-- Product cards will be dynamically added here -->
+            <div class="hlo" style="width: 800px;"><br>
+            <div class="product-card">
+                <div class="badge">New</div>
+                <img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/um-training-001-1.jpg"
+                    alt="Product Image" height="400px" width="200px">
+
+                <h2 class="product-title">LIMITED</h2>
+                <p class="product-variant">BLUE / S</p>
+                <p class="product-variant">BLUE / M</p>
+                <p class="product-variant">BLUE / L</p>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">New</div>
+                <img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/limited-edition-003-4.jpg"
+                    alt="Product Image" height="400px" width="200px">
+
+                <h2 class="product-title">UM TRAINING</h2>
+                <p class="product-variant">RED / S</p>
+                <p class="product-variant">RED / M</p>
+                <p class="product-variant">RED / L</p>
+            </div>
+            <br>
+
+            <div class="product-card">
+                <div class="badge">New</div>
+                <img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/beach-bum-01.jpg" alt="Product Image"
+                    height="400px" width="200px">
+
+                <h2 class="product-title">BEACH BUM</h2>
+                <p class="product-variant">ORANGE / S</p>
+                <p class="product-variant">ORANGE / M</p>
+                <p class="product-variant">ORANGE / L</p>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">New</div>
+                <img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/limited-edition-003-4.jpg"
+                    alt="Product Image" height="400px" width="200px">
+
+                <h2 class="product-title">UM TRAINING X</h2>
+                <p class="product-variant">RED / XS</p>
+                <p class="product-variant">RED / M</p>
+                <p class="product-variant">RED / XL</p>
+            </div>
+            <br>
+
+            <div class="product-card">
+                <div class="badge">New</div>
+                <img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/um-training-001-1.jpg"
+                    alt="Product Image" height="400px" width="200px">
+
+                <h2 class="product-title">LIMITED X</h2>
+                <p class="product-variant">BLUE / XS</p>
+                <p class="product-variant">BLUE / M</p>
+                <p class="product-variant">BLUE / XL</p>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">New</div>
+                <img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/beach-bum-01.jpg" alt="Product Image"
+                    height="400px" width="200px">
+
+                <h2 class="product-title">BEACH BUM X</h2>
+                <p class="product-variant">ORANGE / XS</p>
+                <p class="product-variant">ORANGE / M</p>
+                <p class="product-variant">ORANGE / XL</p>
+            </div>
+            <br>
+            <br>
+            </div>
+            <br>
+        </div>
+    </center>
+</body>
+
+</html>

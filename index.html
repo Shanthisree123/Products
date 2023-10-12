@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="script.js">
+
+    <style>
+        table, th, td {
+          border:0px solid rgb(248, 247, 247);
+          border-radius: 5px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .product-card {
+        border: 1px solid #ddd;
+        margin: 10px;
+        padding: 10px;
+        display: inline-block;
+        width: 300px;
+        text-align: center;
+    }
+    
+    /* Badge styling */
+    .badge{
+        background-color: #63a6e0;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        width: 100px;
+    }
+    td{
+        padding-right: 50px;
+        padding-left: 100px;
+    }
+    #search-input {
+    width: 30%;
+    padding: 13px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+    .hlo{
+        border:1px solid #0b0b0b;
+
+    }
+        
+        </style>
+</head>
+<body><center>
+    <h1>Product List</h1>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Type something to search products..." >
+        <button style="font-size: 25px;"  onclick="searchProducts()" >Search</button>
+    </div><br>
+    <div class="layout-switch">
+        <button id="grid-layout-button"><a href="grid.html" style="font-size: 20px; color: #0b0b0b;">Grid</a></button>
+        <button id="list-layout-button"><a href="index.html" style="font-size: 20px; color: #0b0b0b;">List</a></button>
+    </div>
+    <br>
+<div class="hlo" style="width: 800px;">
+    <div id="search-results">
+        
+ <table>
+    <tr>
+        <td><p class="badge">NEW</p>
+            <img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/um-training-001-1.jpg" alt="Product Image" height="400px" width="300px"></td>
+    <td><h2>Limited</h2><br>
+    <p>BLUE / S</p><br><p>BLUE / M</p><br><p>BLUE / L</p></td>
+</tr>
+    <tr>
+        <td>
+            <p class="badge">HOT</p><img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/limited-edition-003-4.jpg" alt="Product Image" height="400px" width="300px"></td>
+        <td><h2>Um Training</h2><br><P>RED / S</P><br><p>RED / M</p><br><p>RED / L</p></td>
+    </tr>
+
+    <tr>
+        <td>
+            <p class="badge">NEW</p><img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/beach-bum-01.jpg" alt="Product Image" height="400px" width="300px"></td>
+        <td><h2>Beach Bum</h2><br><P>ORANGE / S</P><br><p>ORANGE/ M</p><br><p>ORANGE / L</p></td>
+    </tr>
+
+    <tr>
+        <td>
+            <p class="badge">HOT</p><img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/limited-edition-003-4.jpg" alt="Product Image" height="400px" width="300px"></td>
+        <td><h2>Um Training X</h2><br><P>RED / XS</P><br><p>RED / M</p><br><p>RED / XL</p></td>
+    </tr>
+
+    <tr>
+        <td>
+            <p class="badge">NEW</p><img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/um-training-001-1.jpg" alt="Product Image" height="400px" width="300px"></td>
+    <td><h2>Limited X</h2><br>
+    <p>BLUE / XS</p><br><p>BLUE / M</p><br><p>BLUE / XL</p></td>
+    </tr>
+
+<tr>
+    <td>
+        <p class="badge">NEW</p><img src="https://cdn.shopify.com/s/files/1/0769/2615/7113/files/beach-bum-01.jpg" alt="Product Image" height="400px" width="300px"></td>
+    <td><h2>Beach Bum X</h2><br><P>ORANGE / XS</P><br><p>ORANGE/ M</p><br><p>ORANGE / XL</p></td>
+</tr>
+
+ </table>
+</div>
+ <br>
+</div>
+<br>
+</center>
+</body>
+</html>
+
+

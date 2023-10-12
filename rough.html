@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS for product cards and layout */
+        .product-card {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .product-image {
+            width: 200px;
+            height: 300px;
+            margin-right: 10px;
+        }
+        /* Add more styling as needed */
+        .list-layout .product-card {
+            flex-direction: column;
+        }
+        /* Highlight searched text */
+        .highlight {
+            background-color: rgb(225, 225, 95);
+        }
+        a{
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+        }
+        #search{
+            font-size: 25px;
+ 
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Product List</h1>
+    <!-- Search bar -->
+    <input type="text" id="search" placeholder="Search...">
+    
+    <!-- Layout switch buttons -->
+    <br>
+    <br>
+    <div>
+        <button id="grid-layout-button" ><a href="grid.html">Grid</a></button>
+        <button id="list-layout-button"><a href="index.html">List</a></button>
+    </div>
+   
+    <div id="product-container" class="grid-layout">
+         </div>
+</center>
+
+    <script>
+       
+        const products = [
+            {
+                id: 1,
+                title: 'LIMITED',
+                image: 'cap 1.webp',
+                badge: 'NEW',
+                color: 'BLUE',
+                variants: ['S', 'M', 'L'],
+            },
+            
+            {
+                id: 2,
+                title: 'UM TRAINING',
+                image: 'cap 2.webp',
+                badge: 'HOT',
+                color: 'RED',
+                variants: ['S', 'M', 'L'],
+            },
+
+            {
+                id: 3,
+                title: 'BEACH BUM',
+                image: 'cap 3.webp',
+                badge: 'NEW',
+                color: 'ORANGE',
+                variants: ['S', 'M', 'L'],
+            },
+            {
+                id: 4,
+                title: 'UM TRAINING X',
+                image: 'cap 2.webp',
+                badge: 'NEW',
+                color: 'RED',
+                variants: ['XS', 'M', 'XL'],
+            },
+            {
+                id: 5,
+                title: 'LIMITED X',
+                image: 'cap 1.webp',
+                badge: 'HOT',
+                color: 'BLUE',
+                variants: ['XS', 'M', 'XL'],
+            },
+            {
+                id: 6,
+                title: 'BEACH BUM X',
+                image: 'cap 3.webp',
+                badge: 'NEW',
+                color: 'ORANGE',
+                variants: ['XS', 'M', 'XL'],
+            },
+            
+        ];
+
+  
+        let currentLayout = 'grid-layout';
+
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.innerHTML = `
+                <img class="product-image" src="${product.image}" alt="${product.title}">
+                <div>
+                    <h2>${product.title}</h2>
+                    <span class="badge">${product.badge}</span>
+                    <div class="color">${product.color}</div>
+                    <div class="variants">Variants: ${product.variants.join(', ')}</div>
+                </div>
+            `;
+            return card;
+        }
+        
+        function renderProducts(layout) {
+            const container = document.getElementById('product-container');
+            container.innerHTML = '';
+            products.forEach(product => {
+                const card = createProductCard(product);
+                container.appendChild(card);
+            });
+            container.classList.add(layout);
+        }
+
+        function handleSearch() {
+            const searchInput = document.getElementById('search');
+            const searchTerm = searchInput.value.toLowerCase();
+
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                const title = card.querySelector('h2').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm)) {
+                    card.classList.add('highlight');
+                } else {
+                    card.classList.remove('highlight');
+                }
+            });
+        }
+
+        document.getElementById('grid-layout-button').addEventListener('click', () => {
+            currentLayout = 'grid-layout';
+            renderProducts(currentLayout);
+        });
+        document.getElementById('list-layout-button').addEventListener('click', () => {
+            currentLayout = 'list-layout';
+            renderProducts(currentLayout);
+        });
+        document.getElementById('search').addEventListener('input', handleSearch);
+
+        renderProducts(currentLayout);
+    </script>
+</body>
+</html>
